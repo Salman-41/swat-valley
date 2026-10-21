@@ -1,0 +1,5 @@
+---
+interface Props { href: string; label: string; class?: string }
+const { href,label,class:className='' }=Astro.props;
+---
+<a class:list={['round-link',className]} href={href}><span>{label}</span><i aria-hidden="true">↗</i></a>

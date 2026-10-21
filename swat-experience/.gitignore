@@ -1,2 +1,8 @@
+node_modules/
+.astro/
+dist/
+.sites-runtime/
+test-results/
+playwright-report/
 *.tar.gz
 .DS_Store

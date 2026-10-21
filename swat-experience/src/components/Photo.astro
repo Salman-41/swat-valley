@@ -1,0 +1,13 @@
+---
+import { getPhoto } from '../data/photos';
+interface Props { id: string; class?: string; eager?: boolean; sizes?: string; caption?: boolean; detail?: boolean; }
+const { id, class: className='', eager=false, sizes='(max-width: 700px) 100vw, 70vw', caption=false, detail=true }=Astro.props;
+const p=getPhoto(id);
+const widths=[480,960,1600,2400].filter(w=>w<=p.width);
+const srcset=(type:string)=>widths.map(w=>`/images/${id}-${w}.${type} ${w}w`).join(', ');
+---
+<figure class:list={['photo',className]} data-photo>
+  <picture><source type="image/avif" srcset={srcset('avif')} sizes={sizes}/><source type="image/webp" srcset={srcset('webp')} sizes={sizes}/><img src={`/images/${id}-960.jpg`} width={p.width} height={p.height} alt={p.alt} loading={eager?'eager':'lazy'} decoding="async" fetchpriority={eager?'high':'auto'} /></picture>
+  {detail && <button class="photo-expand" type="button" data-open-photo={`/images/${id}-1600.jpg`} data-photo-caption={`${p.title} · ${p.author} · ${p.date} · ${p.license}`} data-photo-source={p.source} aria-label={`Look closer: ${p.alt}`}>Look closer <span aria-hidden="true">↗</span></button>}
+  {caption && <figcaption>{p.author} · {p.date} <a href={`/sources/#photo-${id}`} aria-label={`Credits and license for ${p.title}`}>{p.license} ↗</a></figcaption>}
+</figure>

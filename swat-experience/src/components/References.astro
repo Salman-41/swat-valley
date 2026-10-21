@@ -1,0 +1,6 @@
+---
+import { sources, type SourceId } from '../data/sources';
+interface Props { ids: SourceId[]; title?: string }
+const {ids,title='Read further'}=Astro.props;
+---
+<aside class="references" aria-label={title}><p class="eyebrow">{title}</p><ul>{ids.map(id=><li><a href={sources[id].url} target="_blank" rel="noopener noreferrer">{sources[id].title} <span aria-hidden="true">↗</span></a><span class="reference-publisher">{sources[id].publisher}</span></li>)}</ul></aside>
