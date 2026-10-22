@@ -1,0 +1,240 @@
+[
+  {
+    "route": "/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 7
+      }
+    ],
+    "passes": 20
+  },
+  {
+    "route": "/atlas/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodes": 2
+      },
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 16
+      }
+    ],
+    "passes": 26
+  },
+  {
+    "route": "/heritage/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 4
+      }
+    ],
+    "passes": 23
+  },
+  {
+    "route": "/culture/",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              "div > .references[aria-label=\"Read further\"] > ul > li:nth-child(1) > .reference-publisher"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.4 (foreground color: #586353, background color: #ddd7c9, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div > .references[aria-label=\"Read further\"] > ul > li:nth-child(2) > .reference-publisher"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.4 (foreground color: #586353, background color: #ddd7c9, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 2
+      }
+    ],
+    "passes": 27
+  },
+  {
+    "route": "/environment/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodes": 1
+      },
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 5
+      }
+    ],
+    "passes": 26
+  },
+  {
+    "route": "/sources/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 2
+      }
+    ],
+    "passes": 20
+  },
+  {
+    "route": "/places/mahodand/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 6
+      }
+    ],
+    "passes": 22
+  },
+  {
+    "route": "/places/kalam/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 6
+      }
+    ],
+    "passes": 22
+  },
+  {
+    "route": "/places/bahrain/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 6
+      }
+    ],
+    "passes": 22
+  },
+  {
+    "route": "/places/madyan/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 2
+      }
+    ],
+    "passes": 22
+  },
+  {
+    "route": "/places/mingora/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 2
+      }
+    ],
+    "passes": 22
+  },
+  {
+    "route": "/places/barikot/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 2
+      }
+    ],
+    "passes": 22
+  },
+  {
+    "route": "/places/malam-jabba/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 6
+      }
+    ],
+    "passes": 22
+  },
+  {
+    "route": "/404.html",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 2
+      }
+    ],
+    "passes": 19
+  }
+]

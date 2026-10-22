@@ -198,7 +198,7 @@ export const places: Place[] = [
         heading: "Between the urban and upper valleys.",
         body: [
           "Madyan’s position makes the north–south geography readable. Mingora lies in the lower valley to the south; Bahrain and the upper branches around Kalam lie further north. The atlas shows these places together without turning their spacing into travel times.",
-          "The main photograph shows Madyan itself. The separate river photograph below is identified as Bahrain, the neighbouring upstream town: a connection, not a substituted view of Madyan.",
+          "The main photograph shows Madyan itself. Follow the Bahrain place note to see the neighbouring upstream town and its river setting.",
         ],
         sources: ["geography", "kite"],
       },
@@ -291,7 +291,7 @@ export const places: Place[] = [
         heading: "Hill and lower town.",
         body: [
           "The excavation team studies the relationship between the acropolis and the settlement below it. The hill offers a defensible position; the plain holds a record of urban spaces and their changing uses.",
-          "The main photograph is of excavated walls at Barikot Ghundai. The second image on this page shows Butkara I, a separate sacred complex near Saidu Sharif, to connect two different archaeological settings within Swat.",
+          "The main photograph is of excavated walls at Barikot Ghundai. The heritage chapter connects this urban setting with Butkara I, a separate sacred complex near Saidu Sharif.",
         ],
         sources: ["excavation", "butkara"],
       },

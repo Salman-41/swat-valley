@@ -1,0 +1,23 @@
+[
+  {
+    "name": "siena",
+    "url": "https://www.siena.film/",
+    "status": 200,
+    "title": "Siena Film Foundation",
+    "text": "ENTER\nHOLD AND DRAG TO NAVIGATE THE CONTENT\nSCROLL TO UNLOCK THE IMMERSIVE FILM EXPERIENCE\nCLICK ON LEFT-SIDE MENU TO QUICK NAVIGATE FILMS\nUSE THE RIGHT MENU FOR SEAMLESS NAVIGATION\nCLICK 'EXPLORE' TO VIEW DETAILED CASE STUDIES\nCLOSE"
+  },
+  {
+    "name": "vermeer",
+    "url": "https://www.rijksmuseum.nl/en/johannes-vermeer",
+    "status": 200,
+    "title": "Closer to Johannes Vermeer - Rijksmuseum",
+    "text": "EN"
+  },
+  {
+    "name": "bear71",
+    "url": "https://bear71vr.nfb.ca/",
+    "status": 200,
+    "title": "NFB/Interactive - Bear 71 VR",
+    "text": "BEAR 71\n \n+STORY\n+STORY"
+  }
+]

@@ -32,24 +32,33 @@ function closePhoto() {
   image?.removeAttribute("src");
   photoTrigger?.focus();
 }
-document
-  .querySelectorAll<HTMLButtonElement>("[data-open-photo]")
-  .forEach((button) =>
-    button.addEventListener("click", () => {
-      if (!dialog || !image || !caption || !source) return;
-      photoTrigger = button;
-      dialog.classList.add("is-loading");
-      dialog.classList.remove("has-error");
-      image.alt =
-        button.closest("figure")?.querySelector("img")?.alt ??
-        "Photograph detail";
-      image.src = button.dataset.openPhoto ?? "";
-      caption.textContent = button.dataset.photoCaption ?? "";
-      source.href = button.dataset.photoSource ?? "/sources/";
-      dialog.showModal();
-      document.body.classList.add("dialog-open");
-    }),
-  );
+const photographs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-open-photo]'));
+const zoom = document.querySelector<HTMLInputElement>('#photo-zoom');
+const viewport = document.querySelector<HTMLElement>('.photo-viewport');
+let currentPhoto = 0;
+function setZoom(value:number) {
+ if(!image||!viewport||!zoom)return;
+ zoom.value=String(value);
+ const output=document.querySelector('#photo-scale');if(output)output.textContent=`${value}%`;
+ image.style.width=`${value}%`;
+ image.style.maxHeight=value===100?'65svh':'none';
+ image.style.maxWidth='none';
+ if(value===100)viewport.scrollTo({left:0,top:0});
+}
+function showPhoto(index:number) {
+ const button=photographs[index];if(!button||!dialog||!image||!caption||!source)return;
+ currentPhoto=index;
+ dialog.classList.add('is-loading');dialog.classList.remove('has-error');
+ image.alt=button.closest('figure')?.querySelector('img')?.alt??'Photograph detail';
+ image.src=button.dataset.openPhoto??'';
+ caption.textContent=button.dataset.photoCaption??'';
+ source.href=button.dataset.photoSource??'/sources/';setZoom(100);
+ document.querySelectorAll<HTMLButtonElement>('[data-photo-previous],[data-photo-next]').forEach(control=>control.disabled=photographs.length<2);
+}
+photographs.forEach((button,index)=>button.addEventListener('click',()=>{photoTrigger=button;showPhoto(index);dialog?.showModal();document.body.classList.add('dialog-open');}));
+zoom?.addEventListener('input',()=>setZoom(Number(zoom.value)));
+document.querySelector('[data-photo-previous]')?.addEventListener('click',()=>showPhoto((currentPhoto+photographs.length-1)%photographs.length));
+document.querySelector('[data-photo-next]')?.addEventListener('click',()=>showPhoto((currentPhoto+1)%photographs.length));
 image?.addEventListener("load", () => dialog?.classList.remove("is-loading"));
 image?.addEventListener("error", () => {
   dialog?.classList.remove("is-loading");

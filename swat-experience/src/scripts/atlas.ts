@@ -64,6 +64,7 @@ function update(push = false) {
   };
   text("atlas-region", place.region);
   text("atlas-name", place.name);
+  text("map-story-name", place.name);
   text("atlas-text", place.lenses[lens]);
   text(
     "atlas-coordinates",

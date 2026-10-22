@@ -177,3 +177,14 @@ test("reduced motion and missing route are usable", async ({ page }) => {
   expect(response?.status()).toBe(404);
   await expect(page.locator("main h1")).toHaveText("Lost the thread?");
 });
+
+test('photograph inspection zooms, pans and changes the credited image', async ({page})=>{
+ await page.goto('/places/mahodand/');await page.locator('[data-open-photo]').first().click();
+ await expect(page.locator('#photo-dialog')).toBeVisible();
+ await page.locator('#photo-zoom').fill('200');await page.locator('#photo-zoom').dispatchEvent('input');
+ await expect(page.locator('#photo-scale')).toHaveText('200%');
+ expect(await page.locator('.photo-viewport').evaluate(el=>el.scrollWidth>el.clientWidth)).toBeTruthy();
+ await page.getByRole('button',{name:'Next photograph',exact:true}).click();
+ await expect(page.locator('#detail-caption')).toContainText('Abeermajid1996');await expect(page.locator('#photo-scale')).toHaveText('100%');
+ await page.keyboard.press('Escape');await expect(page.locator('[data-open-photo]').first()).toBeFocused();
+});
