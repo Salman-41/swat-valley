@@ -1,0 +1,83 @@
+{
+  "environment": "Headless Brave on local Linux; software GPU, warm local server. Lab observations, not field INP or physical-device FPS.",
+  "viewport": "1440x900",
+  "frameSamples": 116,
+  "medianFrameMs": 16.700000000000273,
+  "p95FrameMs": 33.40000000000009,
+  "framesOver33ms": 31,
+  "first40AverageMs": 20,
+  "last40AverageMs": 22.915,
+  "cls": 0.00019630239143947188,
+  "longTasks": [
+    109
+  ],
+  "events": [
+    104,
+    104,
+    104,
+    104,
+    104,
+    104,
+    104,
+    104,
+    104,
+    104,
+    104,
+    104,
+    104,
+    80,
+    80,
+    80,
+    80,
+    80,
+    80,
+    80,
+    80,
+    80
+  ],
+  "lcp": 292,
+  "heap": 5585073,
+  "quality": "full",
+  "resources": [
+    {
+      "name": "/fonts/italiana.ttf",
+      "bytes": 26984,
+      "duration": 54.1999999997206
+    },
+    {
+      "name": "/_astro/Base.v6KiSzbI.css",
+      "bytes": 8144,
+      "duration": 57.799999999813735
+    },
+    {
+      "name": "/images/lake-1600.avif",
+      "bytes": 304615,
+      "duration": 59.60000000009313
+    },
+    {
+      "name": "/_astro/Base.astro_astro_type_script_index_1_lang.C12UI41m.js",
+      "bytes": 36634,
+      "duration": 62.40000000037253
+    },
+    {
+      "name": "/fonts/dm-sans.ttf",
+      "bytes": 48580,
+      "duration": 79.60000000009313
+    },
+    {
+      "name": "/images/butkara-1600.avif",
+      "bytes": 251820,
+      "duration": 25.699999999720603
+    },
+    {
+      "name": "/_astro/gsap.BHS3Flg1.js",
+      "bytes": 27349,
+      "duration": 26.200000000186265
+    },
+    {
+      "name": "/favicon.svg",
+      "bytes": 515,
+      "duration": 11.5
+    }
+  ]
+}

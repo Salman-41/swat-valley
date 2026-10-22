@@ -1,56 +1,372 @@
-import type { SourceId } from './sources';
-export type Lens = 'landscape' | 'language' | 'memory';
-export interface PlaceSection { heading: string; body: string[]; sources: SourceId[] }
-export interface Place { id:string; name:string; region:string; kind:string; image:string; secondaryImage:string; coordinates:[number,number]; coordinateUrl:string; coordinateCredit:string; coordinateMeaning:string; title:string; intro:string; lenses:Record<Lens,string>; sections:PlaceSection[]; observation:string; related:string[]; chapter:{href:string;label:string}; }
-export const places:Place[]=[
-{
- id:'mahodand',name:'Mahodand',region:'Upper Ushu valley · Alpine lake',kind:'lake',image:'lake',secondaryImage:'mahodand',coordinates:[72.6502,35.7138],coordinateUrl:'https://pmc.ncbi.nlm.nih.gov/articles/PMC9865100/',coordinateCredit:'Bilal et al., 2023',coordinateMeaning:'Published lake-study reference point',title:'A lake is part\nof a river.',
- intro:'Water, meadow, conifers and a high mountain ridge. Mahodand opens a view into the upper catchment, beyond the main line of Swat’s river towns.',
- lenses:{landscape:'Mahodand belongs to the upper Ushu landscape beyond Kalam. It sits in a tributary valley, within the larger catchment that feeds the Swat River.',language:'The lake lies beyond the Gawri-speaking upper-valley settlements around Kalam and Ushu. Language belongs to people and communities; a lake marker is not a cultural boundary.',memory:'A 2023 study detected microplastics in lake samples collected in summer 2019. The lake holds traces of human activity as well as the reflection of the mountains.'},
- sections:[{heading:'Look upstream.',body:['The lake lies beyond Matiltan in the upper Ushu valley. Its location matters as much as its appearance: this is a branch of a river system, connected to the confluence at Kalam and to the towns further south.','The provincial guide and lake research describe an alpine setting. The forests and meadow in the photographs belong to that particular shore and moment; they do not stand for every part of upper Swat.'],sources:['tourism','lakeStudy']},{heading:'A less visible trace.',body:['In June and July 2019, researchers collected surface-water and brown-trout samples at Mahodand. They detected microplastics in the water and in the digestive tracts of sampled fish. The work makes a less visible material history part of the lake’s story.','This is a dated research finding. It does not provide a live water-quality reading or a health assessment. It does challenge the easy assumption that a remote-looking landscape is untouched by human activity.'],sources:['lakeStudy']}],
- observation:'In the wide photograph, follow the edge where meadow meets water. In the close view, the focus moves from mountain scale to a handful of flowers. Both are records of Mahodand; neither is the whole place.',related:['kalam','bahrain'],chapter:{href:'/environment/',label:'Water, land & change'}
-},
-{
- id:'kalam',name:'Kalam',region:'Upper valley · River confluence',kind:'confluence',image:'kalam',secondaryImage:'ushu-forest',coordinates:[72.578087,35.481798],coordinateUrl:'https://www.geonames.org/search.html?country=PK&q=Kalam%2C+Swat%2C+Khyber+Pakhtunkhwa',coordinateCredit:'GeoNames · CC BY 4.0',coordinateMeaning:'Representative town location',title:'Where two rivers\nbecome one.',
- intro:'At Kalam, the Ushu and Utror rivers meet. The upper valley branches apart; the Swat River gathers those waters and carries them south.',
- lenses:{landscape:'Kalam is the confluence of the Ushu and Utror rivers. The Ushu branch extends northeast toward Matiltan and Mahodand; Utror opens to the west.',language:'Gawri, also known as Kalami, is spoken around Kalam, Ushu and Utror. Linguist Joan Baart and community researcher Muhammad Zaman Sagar describe the relationship between these speech communities.',memory:'A 2020 provincial tourism assessment discussed forest pressure, waste, sewage and unplanned building in Kalam. The town’s future belongs to more than its photographic image.'},
- sections:[{heading:'A meeting, then a branching.',body:['The confluence gives Kalam a position in the whole valley. Upstream, the landscape divides into distinct branches; downstream, the Swat River connects the high valleys with Bahrain and Madyan. The atlas preserves those geographical relationships.','The photographs here depict the mountain landscape of Kalam and nearby Ushu. They show two settings within the upper valley, rather than a substitute image of the town centre.'],sources:['gawriField','tourism']},{heading:'A place spoken into being.',body:['Research on Gawri links the language to Kalam, Ushu and Utror, and to communities beyond Swat in Upper Dir. The alternative name Kalami reflects that association with Kalam. A language’s reach is wider than one marker on a map.','Older linguistic descriptions are useful for geography and language structure. Their historical population and tourism figures should not be read as current counts.'],sources:['gawriField']},{heading:'The town beyond the view.',body:['The 2020 KITE environmental and social framework identified issues including waste, sewage, forests and building pressure in Kalam. These dated planning observations help connect destination imagery to the everyday work of caring for a town.'],sources:['kite']}],
- observation:'Trace both tributaries on the atlas before moving downstream. The confluence is a relationship between places, not simply a point where a photograph was taken.',related:['mahodand','bahrain'],chapter:{href:'/culture/#gawri',label:'Gawri: language & place'}
-},
-{
- id:'bahrain',name:'Bahrain',region:'Middle valley · Riverside town',kind:'town',image:'bahrain-town',secondaryImage:'bahrain-river',coordinates:[72.548503,35.209259],coordinateUrl:'https://www.geonames.org/search.html?q=Bahrain&country=PK',coordinateCredit:'GeoNames · CC BY 4.0',coordinateMeaning:'Representative town location in Swat, Pakistan',title:'The river carries\na language.',
- intro:'Buildings gather close to the river. Between Madyan and Kalam, Bahrain is a place to read water, settlement and the continuing life of Torwali together.',
- lenses:{landscape:'Bahrain lies between Madyan and Kalam on the Swat River corridor. The photographs show the close relationship between flowing water and the town’s built edges.',language:'Bahrain is an important centre of Torwali language life. Educator Zubair Torwali describes cultural work connecting poetry, music, festivals and children’s education.',memory:'Manjoora and the Simam festival are documented community initiatives. They keep language in use through making, performance and gathering.'},
- sections:[{heading:'A shared edge.',body:['The river and the built town appear within the same narrow frame. The provincial tourism guide also draws attention to Bahrain’s wooden architectural details. Looking at the town means attending to both the water corridor and the things people build beside it.','The photographs were made in 2015 and 2018. They record particular moments in Bahrain’s recent life, rather than current river conditions.'],sources:['tourism']},{heading:'Culture made in the present.',body:['In his Smithsonian Folklife essay, Zubair Torwali writes as an educator and cultural organiser from the region. His account follows the work of recording music, renewing poetry and supporting language through education.','The Manjoora song collection and Simam festival make that work concrete. These are named projects made by people, not anonymous traditions added to a visitor’s view. His own account is the place to begin listening and reading further.'],sources:['torwali','culture']}],
- observation:'Compare the wide town view with the river photograph. Notice how the frame changes the balance between flowing water and built space. The relationship remains even when the emphasis shifts.',related:['kalam','madyan'],chapter:{href:'/culture/#torwali',label:'Torwali: poetry & belonging'}
-},
-{
- id:'madyan',name:'Madyan',region:'Middle valley · River & side valleys',kind:'town',image:'madyan',secondaryImage:'bahrain-river',coordinates:[72.53744,35.14129],coordinateUrl:'https://www.openstreetmap.org/node/835518866',coordinateCredit:'OpenStreetMap contributors · ODbL',coordinateMeaning:'Mapped town node',title:'Knowledge in\nthe side valleys.',
- intro:'South of Bahrain, Madyan joins the main river corridor to neighbouring mountain settlements. A landscape of slopes is also a landscape of names and knowledge.',
- lenses:{landscape:'Madyan lies downstream of Bahrain along the main valley corridor. Its setting connects the river with neighbouring villages and side valleys.',language:'Plant names and reported uses are one part of local knowledge. A 2023 study documented this knowledge through interviews in Madyan and seven neighbouring villages.',memory:'Fieldwork records knowledge at a particular time. The plant study preserves reported practices; it does not prove clinical effectiveness or establish that a plant is safe to use.'},
- sections:[{heading:'Between the urban and upper valleys.',body:['Madyan’s position makes the north–south geography readable. Mingora lies in the lower valley to the south; Bahrain and the upper branches around Kalam lie further north. The atlas shows these places together without turning their spacing into travel times.','The main photograph shows Madyan itself. The separate river photograph below is identified as Bahrain, the neighbouring upstream town: a connection, not a substituted view of Madyan.'],sources:['geography','kite']},{heading:'A landscape known in detail.',body:['A 2023 ethnobotanical study by researchers including University of Swat scholars documented plant knowledge in Madyan and seven surrounding villages. Interviews and fieldwork recorded names and reported practices.','Such work reveals another scale of a mountain landscape: not only peaks and views, but particular plants and the language used to distinguish them. The study records knowledge; it is not a visitor’s guide to collecting or preparing medicinal plants.'],sources:['plants']}],
- observation:'Keep the town marker in view while zooming out. Madyan’s significance is partly its connection to places beyond the main road and beyond the frame of a single photograph.',related:['bahrain','mingora'],chapter:{href:'/culture/',label:'Names, knowledge & living culture'}
-},
-{
- id:'mingora',name:'Mingora',region:'Lower valley · Urban centre',kind:'urban',image:'swat-museum',secondaryImage:'butkara',coordinates:[72.362648,34.779499],coordinateUrl:'https://www.geonames.org/advanced-search.html?country=PK&q=Mingora',coordinateCredit:'GeoNames · CC BY 4.0',coordinateMeaning:'Representative town location; museum is in nearby Saidu Sharif',title:'The present\nbeside the past.',
- intro:'The populated lower valley connects markets, homes, museum collections and excavated places. Mingora and nearby Saidu Sharif make several kinds of history visible together.',
- lenses:{landscape:'Mingora is Swat’s principal urban centre in the lower valley. Nearby Saidu Sharif is a distinct place, home to the museum and close to Butkara I.',language:'The region’s cultural life includes the objects people make and use. Swat Museum’s ethnographic collections include embroidery, carved wood and jewellery.',memory:'Butkara I and Swat Museum offer different ways to read material history: an excavated layout on the ground and objects studied and conserved in a collection.'},
- sections:[{heading:'A collection and its ground.',body:['The museum photograph depicts Swat Museum in nearby Saidu Sharif, not Mingora’s town centre. Its collections bring excavated Gandharan sculpture into a space where objects can be conserved and studied.','At Butkara I, the archaeological record describes a central stupa, smaller votive stupas, viharas and columns, along with schist paving and a water tank. Many finds from the site are held in Swat Museum.'],sources:['museum','butkara']},{heading:'Objects beyond antiquity.',body:['The museum also presents ethnographic collections. Local embroidery, carved wood and jewellery put everyday making into the same conversation as older archaeological material. They invite attention to use and skill, not only age.','Mingora’s urban setting matters here. The lower valley is a place of contemporary work and movement, with archaeological landscapes and collections alongside it. Older remains do not erase the present town.'],sources:['museum','gawriField']}],
- observation:'Move between the museum exterior and the photograph of Butkara. The first is a home for collections; the second is a spatial record still embedded in the ground.',related:['barikot','madyan'],chapter:{href:'/heritage/',label:'Read the stones'}
-},
-{
- id:'barikot',name:'Barikot',region:'Lower valley · Archaeological landscape',kind:'archaeology',image:'barikot-ruins',secondaryImage:'butkara',coordinates:[72.223333,34.677778],coordinateUrl:'https://pric.unive.it/projects/khyberpath/research-and-excavations/site-1-barikot',coordinateCredit:'Khyber PATH · Ca’ Foscari University',coordinateMeaning:'Archaeological site reference point',title:'A town\nin layers.',
- intro:'A hilltop, an ancient lower town and the river beside them. Barikot’s archaeology reveals a place repeatedly built, inhabited and remade.',
- lenses:{landscape:'Barikot’s archaeological landscape joins the hilltop acropolis to the ancient lower town on the adjacent plain, beside the Swat River.',language:'Excavation follows the material traces of different lives: houses, streets, sacred spaces and workshops. Modern Barikot is also a living community around that record.',memory:'Bazira–Barikot is on Pakistan’s UNESCO Tentative List. This is a proposed property for possible future nomination, not an inscription on the World Heritage List.'},
- sections:[{heading:'Hill and lower town.',body:['The excavation team studies the relationship between the acropolis and the settlement below it. The hill offers a defensible position; the plain holds a record of urban spaces and their changing uses.','The main photograph is of excavated walls at Barikot Ghundai. The second image on this page shows Butkara I, a separate sacred complex near Saidu Sharif, to connect two different archaeological settings within Swat.'],sources:['excavation','butkara']},{heading:'Read the changes.',body:['The site team describes occupation across successive cultural phases. Defensive works, housing and sacred buildings were altered, extended and reused. Archaeology reads those changes through stratigraphy and material evidence.','An origin story or a single celebrated ruler cannot explain every layer. The strength of the site is the relationship between many phases and many kinds of activity.'],sources:['excavation']},{heading:'What tentative listing means.',body:['Pakistan submitted Bazira–Barikot to the UNESCO Tentative List in May 2026. A Tentative List identifies properties a state may consider for nomination. It does not itself award World Heritage status.'],sources:['barikot']}],
- observation:'Follow the junctions between masonry lines in the excavation photograph. They are a reason to ask about sequence and reuse, rather than imagine a complete reconstruction unsupported by the remains.',related:['mingora','madyan'],chapter:{href:'/heritage/#layers',label:'Explore the archaeological layers'}
-},
-{
- id:'malam-jabba',name:'Malam Jabba',region:'Eastern mountains · Side journey',kind:'ridge',image:'malam-jabba',secondaryImage:'malam-jabba',coordinates:[72.57185,34.79979],coordinateUrl:'https://www.geonames.org/1482290/',coordinateCredit:'GeoNames · CC BY 4.0',coordinateMeaning:'Representative locality; not a lift terminal',title:'Beyond\nthe main current.',
- intro:'East of Mingora, the valley opens into a different mountain setting. Malam Jabba belongs to a side journey, away from the line of towns along the Swat River.',
- lenses:{landscape:'Malam Jabba lies east of the main Swat River corridor. The atlas marks its actual location without connecting it to an invented river course.',language:'A mountain destination is also a lived setting of work and land use. No single language or cultural identity is assigned to every person here.',memory:'A 2015 study sampled thirteen forest stands around Malam Jabba. It recorded forest structure and regeneration, offering a dated ecological view beyond recreation.'},
- sections:[{heading:'Read the slopes.',body:['The locality sits east of Mingora. That position changes the journey through the atlas: this is a side valley, rather than another stop on the main river.','The photograph shows shafts of sunlight across the mountain setting in December 2013. It records a particular combination of weather, light and season. It makes no promise about snow or present conditions.'],sources:['geography']},{heading:'How a forest renews.',body:['In a 2015 study, researchers surveyed thirteen forest stands around Malam Jabba. The sampled communities included blue pine, Himalayan spruce and fir. The paper describes disturbance and gaps in regeneration in those stands.','Forest structure is about more than the presence of trees. The distribution of sizes and younger growth can reveal questions about renewal. These results belong to a dated sample; they should not be presented as a current survey of every slope.'],sources:['forest']}],
- observation:'Look at the alternating bands of light and shadow in the photograph. Then return to the atlas: the location has not moved, but the way it is seen has changed.',related:['mingora','kalam'],chapter:{href:'/environment/#forest',label:'Forest, water & renewal'}
+import type { SourceId } from "./sources";
+export type Lens = "landscape" | "language" | "memory";
+export interface PlaceSection {
+  heading: string;
+  body: string[];
+  sources: SourceId[];
 }
+export interface Place {
+  id: string;
+  name: string;
+  region: string;
+  kind: string;
+  image: string;
+  secondaryImage: string;
+  coordinates: [number, number];
+  coordinateUrl: string;
+  coordinateCredit: string;
+  coordinateMeaning: string;
+  title: string;
+  intro: string;
+  lenses: Record<Lens, string>;
+  sections: PlaceSection[];
+  observation: string;
+  related: string[];
+  chapter: { href: string; label: string };
+}
+export const places: Place[] = [
+  {
+    id: "mahodand",
+    name: "Mahodand",
+    region: "Upper Ushu valley · Alpine lake",
+    kind: "lake",
+    image: "lake",
+    secondaryImage: "mahodand",
+    coordinates: [72.6502, 35.7138],
+    coordinateUrl: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9865100/",
+    coordinateCredit: "Bilal et al., 2023",
+    coordinateMeaning: "Published lake-study reference point",
+    title: "A lake is part\nof a river.",
+    intro:
+      "Water, meadow, conifers and a high mountain ridge. Mahodand opens a view into the upper catchment, beyond the main line of Swat’s river towns.",
+    lenses: {
+      landscape:
+        "Mahodand belongs to the upper Ushu landscape beyond Kalam. It sits in a tributary valley, within the larger catchment that feeds the Swat River.",
+      language:
+        "The lake lies beyond the Gawri-speaking upper-valley settlements around Kalam and Ushu. Language belongs to people and communities; a lake marker is not a cultural boundary.",
+      memory:
+        "A 2023 study detected microplastics in lake samples collected in summer 2019. The lake holds traces of human activity as well as the reflection of the mountains.",
+    },
+    sections: [
+      {
+        heading: "Look upstream.",
+        body: [
+          "The lake lies beyond Matiltan in the upper Ushu valley. Its location matters as much as its appearance: this is a branch of a river system, connected to the confluence at Kalam and to the towns further south.",
+          "The provincial guide and lake research describe an alpine setting. The forests and meadow in the photographs belong to that particular shore and moment; they do not stand for every part of upper Swat.",
+        ],
+        sources: ["tourism", "lakeStudy"],
+      },
+      {
+        heading: "A less visible trace.",
+        body: [
+          "In June and July 2019, researchers collected surface-water and brown-trout samples at Mahodand. They detected microplastics in the water and in the digestive tracts of sampled fish. The work makes a less visible material history part of the lake’s story.",
+          "This is a dated research finding. It does not provide a live water-quality reading or a health assessment. It does challenge the easy assumption that a remote-looking landscape is untouched by human activity.",
+        ],
+        sources: ["lakeStudy"],
+      },
+    ],
+    observation:
+      "In the wide photograph, follow the edge where meadow meets water. In the close view, the focus moves from mountain scale to a handful of flowers. Both are records of Mahodand; neither is the whole place.",
+    related: ["kalam", "bahrain"],
+    chapter: { href: "/environment/", label: "Water, land & change" },
+  },
+  {
+    id: "kalam",
+    name: "Kalam",
+    region: "Upper valley · River confluence",
+    kind: "confluence",
+    image: "kalam",
+    secondaryImage: "ushu-forest",
+    coordinates: [72.578087, 35.481798],
+    coordinateUrl:
+      "https://www.geonames.org/search.html?country=PK&q=Kalam%2C+Swat%2C+Khyber+Pakhtunkhwa",
+    coordinateCredit: "GeoNames · CC BY 4.0",
+    coordinateMeaning: "Representative town location",
+    title: "Where two rivers\nbecome one.",
+    intro:
+      "At Kalam, the Ushu and Utror rivers meet. The upper valley branches apart; the Swat River gathers those waters and carries them south.",
+    lenses: {
+      landscape:
+        "Kalam is the confluence of the Ushu and Utror rivers. The Ushu branch extends northeast toward Matiltan and Mahodand; Utror opens to the west.",
+      language:
+        "Gawri, also known as Kalami, is spoken around Kalam, Ushu and Utror. Linguist Joan Baart and community researcher Muhammad Zaman Sagar describe the relationship between these speech communities.",
+      memory:
+        "A 2020 provincial tourism assessment discussed forest pressure, waste, sewage and unplanned building in Kalam. The town’s future belongs to more than its photographic image.",
+    },
+    sections: [
+      {
+        heading: "A meeting, then a branching.",
+        body: [
+          "The confluence gives Kalam a position in the whole valley. Upstream, the landscape divides into distinct branches; downstream, the Swat River connects the high valleys with Bahrain and Madyan. The atlas preserves those geographical relationships.",
+          "The photographs here depict the mountain landscape of Kalam and nearby Ushu. They show two settings within the upper valley, rather than a substitute image of the town centre.",
+        ],
+        sources: ["gawriField", "tourism"],
+      },
+      {
+        heading: "A place spoken into being.",
+        body: [
+          "Research on Gawri links the language to Kalam, Ushu and Utror, and to communities beyond Swat in Upper Dir. The alternative name Kalami reflects that association with Kalam. A language’s reach is wider than one marker on a map.",
+          "Older linguistic descriptions are useful for geography and language structure. Their historical population and tourism figures should not be read as current counts.",
+        ],
+        sources: ["gawriField"],
+      },
+      {
+        heading: "The town beyond the view.",
+        body: [
+          "The 2020 KITE environmental and social framework identified issues including waste, sewage, forests and building pressure in Kalam. These dated planning observations help connect destination imagery to the everyday work of caring for a town.",
+        ],
+        sources: ["kite"],
+      },
+    ],
+    observation:
+      "Trace both tributaries on the atlas before moving downstream. The confluence is a relationship between places, not simply a point where a photograph was taken.",
+    related: ["mahodand", "bahrain"],
+    chapter: { href: "/culture/#gawri", label: "Gawri: language & place" },
+  },
+  {
+    id: "bahrain",
+    name: "Bahrain",
+    region: "Middle valley · Riverside town",
+    kind: "town",
+    image: "bahrain-town",
+    secondaryImage: "bahrain-river",
+    coordinates: [72.548503, 35.209259],
+    coordinateUrl: "https://www.geonames.org/search.html?q=Bahrain&country=PK",
+    coordinateCredit: "GeoNames · CC BY 4.0",
+    coordinateMeaning: "Representative town location in Swat, Pakistan",
+    title: "The river carries\na language.",
+    intro:
+      "Buildings gather close to the river. Between Madyan and Kalam, Bahrain is a place to read water, settlement and the continuing life of Torwali together.",
+    lenses: {
+      landscape:
+        "Bahrain lies between Madyan and Kalam on the Swat River corridor. The photographs show the close relationship between flowing water and the town’s built edges.",
+      language:
+        "Bahrain is an important centre of Torwali language life. Educator Zubair Torwali describes cultural work connecting poetry, music, festivals and children’s education.",
+      memory:
+        "Manjoora and the Simam festival are documented community initiatives. They keep language in use through making, performance and gathering.",
+    },
+    sections: [
+      {
+        heading: "A shared edge.",
+        body: [
+          "The river and the built town appear within the same narrow frame. The provincial tourism guide also draws attention to Bahrain’s wooden architectural details. Looking at the town means attending to both the water corridor and the things people build beside it.",
+          "The photographs were made in 2015 and 2018. They record particular moments in Bahrain’s recent life, rather than current river conditions.",
+        ],
+        sources: ["tourism"],
+      },
+      {
+        heading: "Culture made in the present.",
+        body: [
+          "In his Smithsonian Folklife essay, Zubair Torwali writes as an educator and cultural organiser from the region. His account follows the work of recording music, renewing poetry and supporting language through education.",
+          "The Manjoora song collection and Simam festival make that work concrete. These are named projects made by people, not anonymous traditions added to a visitor’s view. His own account is the place to begin listening and reading further.",
+        ],
+        sources: ["torwali", "culture"],
+      },
+    ],
+    observation:
+      "Compare the wide town view with the river photograph. Notice how the frame changes the balance between flowing water and built space. The relationship remains even when the emphasis shifts.",
+    related: ["kalam", "madyan"],
+    chapter: {
+      href: "/culture/#torwali",
+      label: "Torwali: poetry & belonging",
+    },
+  },
+  {
+    id: "madyan",
+    name: "Madyan",
+    region: "Middle valley · River & side valleys",
+    kind: "town",
+    image: "madyan",
+    secondaryImage: "bahrain-river",
+    coordinates: [72.53744, 35.14129],
+    coordinateUrl: "https://www.openstreetmap.org/node/835518866",
+    coordinateCredit: "OpenStreetMap contributors · ODbL",
+    coordinateMeaning: "Mapped town node",
+    title: "Knowledge in\nthe side valleys.",
+    intro:
+      "South of Bahrain, Madyan joins the main river corridor to neighbouring mountain settlements. A landscape of slopes is also a landscape of names and knowledge.",
+    lenses: {
+      landscape:
+        "Madyan lies downstream of Bahrain along the main valley corridor. Its setting connects the river with neighbouring villages and side valleys.",
+      language:
+        "Plant names and reported uses are one part of local knowledge. A 2023 study documented this knowledge through interviews in Madyan and seven neighbouring villages.",
+      memory:
+        "Fieldwork records knowledge at a particular time. The plant study preserves reported practices; it does not prove clinical effectiveness or establish that a plant is safe to use.",
+    },
+    sections: [
+      {
+        heading: "Between the urban and upper valleys.",
+        body: [
+          "Madyan’s position makes the north–south geography readable. Mingora lies in the lower valley to the south; Bahrain and the upper branches around Kalam lie further north. The atlas shows these places together without turning their spacing into travel times.",
+          "The main photograph shows Madyan itself. The separate river photograph below is identified as Bahrain, the neighbouring upstream town: a connection, not a substituted view of Madyan.",
+        ],
+        sources: ["geography", "kite"],
+      },
+      {
+        heading: "A landscape known in detail.",
+        body: [
+          "A 2023 ethnobotanical study by researchers including University of Swat scholars documented plant knowledge in Madyan and seven surrounding villages. Interviews and fieldwork recorded names and reported practices.",
+          "Such work reveals another scale of a mountain landscape: not only peaks and views, but particular plants and the language used to distinguish them. The study records knowledge; it is not a visitor’s guide to collecting or preparing medicinal plants.",
+        ],
+        sources: ["plants"],
+      },
+    ],
+    observation:
+      "Keep the town marker in view while zooming out. Madyan’s significance is partly its connection to places beyond the main road and beyond the frame of a single photograph.",
+    related: ["bahrain", "mingora"],
+    chapter: { href: "/culture/", label: "Names, knowledge & living culture" },
+  },
+  {
+    id: "mingora",
+    name: "Mingora",
+    region: "Lower valley · Urban centre",
+    kind: "urban",
+    image: "swat-museum",
+    secondaryImage: "butkara",
+    coordinates: [72.362648, 34.779499],
+    coordinateUrl:
+      "https://www.geonames.org/advanced-search.html?country=PK&q=Mingora",
+    coordinateCredit: "GeoNames · CC BY 4.0",
+    coordinateMeaning:
+      "Representative town location; museum is in nearby Saidu Sharif",
+    title: "The present\nbeside the past.",
+    intro:
+      "The populated lower valley connects markets, homes, museum collections and excavated places. Mingora and nearby Saidu Sharif make several kinds of history visible together.",
+    lenses: {
+      landscape:
+        "Mingora is Swat’s principal urban centre in the lower valley. Nearby Saidu Sharif is a distinct place, home to the museum and close to Butkara I.",
+      language:
+        "The region’s cultural life includes the objects people make and use. Swat Museum’s ethnographic collections include embroidery, carved wood and jewellery.",
+      memory:
+        "Butkara I and Swat Museum offer different ways to read material history: an excavated layout on the ground and objects studied and conserved in a collection.",
+    },
+    sections: [
+      {
+        heading: "A collection and its ground.",
+        body: [
+          "The museum photograph depicts Swat Museum in nearby Saidu Sharif, not Mingora’s town centre. Its collections bring excavated Gandharan sculpture into a space where objects can be conserved and studied.",
+          "At Butkara I, the archaeological record describes a central stupa, smaller votive stupas, viharas and columns, along with schist paving and a water tank. Many finds from the site are held in Swat Museum.",
+        ],
+        sources: ["museum", "butkara"],
+      },
+      {
+        heading: "Objects beyond antiquity.",
+        body: [
+          "The museum also presents ethnographic collections. Local embroidery, carved wood and jewellery put everyday making into the same conversation as older archaeological material. They invite attention to use and skill, not only age.",
+          "Mingora’s urban setting matters here. The lower valley is a place of contemporary work and movement, with archaeological landscapes and collections alongside it. Older remains do not erase the present town.",
+        ],
+        sources: ["museum", "gawriField"],
+      },
+    ],
+    observation:
+      "Move between the museum exterior and the photograph of Butkara. The first is a home for collections; the second is a spatial record still embedded in the ground.",
+    related: ["barikot", "madyan"],
+    chapter: { href: "/heritage/", label: "Read the stones" },
+  },
+  {
+    id: "barikot",
+    name: "Barikot",
+    region: "Lower valley · Archaeological landscape",
+    kind: "archaeology",
+    image: "barikot-ruins",
+    secondaryImage: "butkara",
+    coordinates: [72.223333, 34.677778],
+    coordinateUrl:
+      "https://pric.unive.it/projects/khyberpath/research-and-excavations/site-1-barikot",
+    coordinateCredit: "Khyber PATH · Ca’ Foscari University",
+    coordinateMeaning: "Archaeological site reference point",
+    title: "A town\nin layers.",
+    intro:
+      "A hilltop, an ancient lower town and the river beside them. Barikot’s archaeology reveals a place repeatedly built, inhabited and remade.",
+    lenses: {
+      landscape:
+        "Barikot’s archaeological landscape joins the hilltop acropolis to the ancient lower town on the adjacent plain, beside the Swat River.",
+      language:
+        "Excavation follows the material traces of different lives: houses, streets, sacred spaces and workshops. Modern Barikot is also a living community around that record.",
+      memory:
+        "Bazira–Barikot is on Pakistan’s UNESCO Tentative List. This is a proposed property for possible future nomination, not an inscription on the World Heritage List.",
+    },
+    sections: [
+      {
+        heading: "Hill and lower town.",
+        body: [
+          "The excavation team studies the relationship between the acropolis and the settlement below it. The hill offers a defensible position; the plain holds a record of urban spaces and their changing uses.",
+          "The main photograph is of excavated walls at Barikot Ghundai. The second image on this page shows Butkara I, a separate sacred complex near Saidu Sharif, to connect two different archaeological settings within Swat.",
+        ],
+        sources: ["excavation", "butkara"],
+      },
+      {
+        heading: "Read the changes.",
+        body: [
+          "The site team describes occupation across successive cultural phases. Defensive works, housing and sacred buildings were altered, extended and reused. Archaeology reads those changes through stratigraphy and material evidence.",
+          "An origin story or a single celebrated ruler cannot explain every layer. The strength of the site is the relationship between many phases and many kinds of activity.",
+        ],
+        sources: ["excavation"],
+      },
+      {
+        heading: "What tentative listing means.",
+        body: [
+          "Pakistan submitted Bazira–Barikot to the UNESCO Tentative List in May 2026. A Tentative List identifies properties a state may consider for nomination. It does not itself award World Heritage status.",
+        ],
+        sources: ["barikot"],
+      },
+    ],
+    observation:
+      "Follow the junctions between masonry lines in the excavation photograph. They are a reason to ask about sequence and reuse, rather than imagine a complete reconstruction unsupported by the remains.",
+    related: ["mingora", "madyan"],
+    chapter: {
+      href: "/heritage/#layers",
+      label: "Explore the archaeological layers",
+    },
+  },
+  {
+    id: "malam-jabba",
+    name: "Malam Jabba",
+    region: "Eastern mountains · Side journey",
+    kind: "ridge",
+    image: "malam-jabba",
+    secondaryImage: "malam-jabba",
+    coordinates: [72.57185, 34.79979],
+    coordinateUrl: "https://www.geonames.org/1482290/",
+    coordinateCredit: "GeoNames · CC BY 4.0",
+    coordinateMeaning: "Representative locality; not a lift terminal",
+    title: "Beyond\nthe main current.",
+    intro:
+      "East of Mingora, the valley opens into a different mountain setting. Malam Jabba belongs to a side journey, away from the line of towns along the Swat River.",
+    lenses: {
+      landscape:
+        "Malam Jabba lies east of the main Swat River corridor. The atlas marks its actual location without connecting it to an invented river course.",
+      language:
+        "A mountain destination is also a lived setting of work and land use. No single language or cultural identity is assigned to every person here.",
+      memory:
+        "A 2015 study sampled thirteen forest stands around Malam Jabba. It recorded forest structure and regeneration, offering a dated ecological view beyond recreation.",
+    },
+    sections: [
+      {
+        heading: "Read the slopes.",
+        body: [
+          "The locality sits east of Mingora. That position changes the journey through the atlas: this is a side valley, rather than another stop on the main river.",
+          "The photograph shows shafts of sunlight across the mountain setting in December 2013. It records a particular combination of weather, light and season. It makes no promise about snow or present conditions.",
+        ],
+        sources: ["geography"],
+      },
+      {
+        heading: "How a forest renews.",
+        body: [
+          "In a 2015 study, researchers surveyed thirteen forest stands around Malam Jabba. The sampled communities included blue pine, Himalayan spruce and fir. The paper describes disturbance and gaps in regeneration in those stands.",
+          "Forest structure is about more than the presence of trees. The distribution of sizes and younger growth can reveal questions about renewal. These results belong to a dated sample; they should not be presented as a current survey of every slope.",
+        ],
+        sources: ["forest"],
+      },
+    ],
+    observation:
+      "Look at the alternating bands of light and shadow in the photograph. Then return to the atlas: the location has not moved, but the way it is seen has changed.",
+    related: ["mingora", "kalam"],
+    chapter: { href: "/environment/#forest", label: "Forest, water & renewal" },
+  },
 ];
-export const getPlace=(id:string)=>{const place=places.find(p=>p.id===id);if(!place)throw new Error(`Unknown place: ${id}`);return place;};
+export const getPlace = (id: string) => {
+  const place = places.find((p) => p.id === id);
+  if (!place) throw new Error(`Unknown place: ${id}`);
+  return place;
+};

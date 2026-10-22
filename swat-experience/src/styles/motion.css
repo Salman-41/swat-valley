@@ -1,0 +1,130 @@
+/* Motion never provides the only route to content. All resting states are visible. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+html.motion-active {
+  scroll-behavior: auto;
+}
+.motion-control {
+  border: 1px solid var(--line);
+  background: transparent;
+  padding: 8px 12px;
+  min-height: 44px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.reading-current {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 2px;
+  background: #668366;
+  z-index: 30;
+  transform-origin: left;
+  pointer-events: none;
+  transform: scaleX(0);
+}
+.lens-tabs button,
+.language-tabs button {
+  position: relative;
+  isolation: isolate;
+}
+.current-indicator {
+  position: absolute;
+  bottom: 4px;
+  left: 20%;
+  width: 60%;
+  height: 2px;
+  background: var(--meadow);
+  pointer-events: none;
+}
+.motion-active .home-hero h1 {
+  overflow: visible;
+}
+.motion-active .heritage-hero > .photo {
+  overflow: hidden;
+}
+.motion-active .place-hero img {
+  transition: none;
+}
+.camera-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.camera-controls button {
+  min-height: 44px;
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  font-size: 11px;
+}
+.camera-controls button[aria-pressed="true"] {
+  background: var(--meadow);
+}
+.camera-controls small {
+  font-size: 10px;
+  max-width: 140px;
+  line-height: 1.6;
+}
+.atlas-image-frame {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+  background: var(--stone);
+}
+.atlas-image-frame > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.atlas-image-frame .photo-previous {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+@media (max-width: 700px) {
+  .atlas-image-frame {
+    height: 240px;
+  }
+  .motion-control {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reading-current {
+    display: none;
+  }
+  .current-indicator {
+    display: none;
+  }
+}
+html[data-motion="reduced"] .reading-current {
+  display: none;
+}
+html[data-motion="reduced"] {
+  scroll-behavior: auto;
+}
+html[data-motion="reduced"] *,
+html[data-motion="reduced"] *::before,
+html[data-motion="reduced"] *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+.atlas-invitation {
+  overflow: clip;
+}
+.map-reset {
+  color: var(--ink);
+}
+/* Opaque tonal separation avoids a full-viewport blur pass behind dialogs. */
+.index-dialog::backdrop,
+.photo-dialog::backdrop {
+  backdrop-filter: none;
+}
