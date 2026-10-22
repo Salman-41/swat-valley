@@ -4,8 +4,8 @@ import { join, parse } from 'node:path';
 const directory='public/images';
 await mkdir(directory,{recursive:true});
 const manifest=[];
-for(const filename of (await readdir(join(directory,'originals'))).filter(x=>/\.jpe?g$/i.test(x))){
- const input=join(directory,'originals',filename),id=parse(filename).name;
+for(const filename of (await readdir('assets/originals')).filter(x=>/\.jpe?g$/i.test(x))){
+ const input=join('assets/originals',filename),id=parse(filename).name;
  const metadata=await sharp(input).metadata();
  const widths=[480,960,1600,2400].filter(w=>w<=metadata.width);
  for(const width of widths){

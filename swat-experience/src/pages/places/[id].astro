@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import References from '../../components/References.astro';
+import ArrowLink from '../../components/ArrowLink.astro';
+import {places,getPlace} from '../../data/places';
+export function getStaticPaths(){return places.map(place=>({params:{id:place.id},props:{place}}));}
+const {place:p}=Astro.props;
+---
+<Base title={p.name} description={p.intro} image={p.image} section="place">
+<section class:list={['place-hero',['barikot','mingora','madyan'].includes(p.id)&&'hero-split']}><Photo id={p.image} eager sizes="100vw"/><div class="page-heading"><a class="back-link" href={`/atlas/?place=${p.id}`}>← Locate in the valley</a><span class="eyebrow">{p.region}</span><h1>{p.name}</h1><p class="deck">{p.intro}</p></div></section>
+<div class="place-coordinates"><span>{p.coordinates[1].toFixed(5)}° N / {p.coordinates[0].toFixed(5)}° E</span><span>{p.coordinateMeaning}</span><a href={p.coordinateUrl} target="_blank" rel="noopener noreferrer">{p.coordinateCredit} ↗</a></div>
+<div class="reading-layout"><aside class="reading-aside"><span class="eyebrow">In this place</span><nav class="chapter-links">{p.sections.map((s,i)=><a href={`#reading-${i}`}>{s.heading}</a>)}</nav></aside><article class="reading-copy"><h2 class="place-story-heading">{p.title}</h2>{p.sections.map((s,i)=><section id={`reading-${i}`}><h3>{s.heading}</h3>{s.body.map(text=><p>{text}</p>)}<References ids={s.sources}/></section>)}</article></div>
+<div class="photo-band captioned"><Photo id={p.secondaryImage} caption sizes="100vw"/></div>
+{p.id==='madyan'&&<p class="place-photo-note">Connected place: this photograph shows the river at Bahrain, upstream of Madyan.</p>}{p.id==='barikot'&&<p class="place-photo-note">A separate archaeological site: Butkara I, near Saidu Sharif.</p>}
+<section class="place-observation"><span class="eyebrow">An invitation to look</span><p>{p.observation}</p></section><section class="place-connections"><div><span class="eyebrow">Another current</span><h2>Keep following.</h2><ArrowLink href={p.chapter.href} label={p.chapter.label}/></div><nav class="nearby-links" aria-label="Related places">{p.related.map(id=>{const q=getPlace(id);return <a href={`/places/${id}/`}><span>{q.name} ↗</span><small>{q.region}</small></a>})}</nav></section>
+</Base>

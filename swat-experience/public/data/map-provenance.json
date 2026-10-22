@@ -1,0 +1,19 @@
+{
+  "source": "https://tiles.openfreemap.org/planet/20261018_080001_pt/{z}/{x}/{y}.pbf",
+  "retrieved": "2026-10-22",
+  "bounds": [
+    71.8,
+    34.4,
+    73.1,
+    36.0
+  ],
+  "zoom": [
+    7,
+    10
+  ],
+  "tiles": 33,
+  "bytes": 1856547,
+  "license": "ODbL 1.0",
+  "attribution": "\u00a9 OpenStreetMap contributors; OpenFreeMap; OpenMapTiles",
+  "licenseUrl": "https://www.openstreetmap.org/copyright"
+}
