@@ -15,9 +15,9 @@ export const sources = {
   kite: {
     title:
       "Khyber Pakhtunkhwa Integrated Tourism Development Project: Environmental & Social Management Framework",
-    publisher: "Government of Khyber Pakhtunkhwa, 2020",
-    url: "https://old.kptourism.com/uploads/images/downloads/1586272079279KITE%20E%26S%20Management%20Framework%2C%20updated%20with%20COVID-19%20checklists.pdf",
-    note: "Dated planning observations on waste, building and forests in Kalam, and the main valley road corridor.",
+    publisher: "Government of Khyber Pakhtunkhwa · February 2019, World Bank archive",
+    url: "https://documents1.worldbank.org/curated/en/598531559554827808/pdf/Environmental-and-Social-Management-Framework.pdf",
+    note: "Sections 4.4.2 and 4.5.1: dated planning observations on waste, building and forests in Kalam, and the valley road corridor. This verified 2019 edition replaces the unavailable 2020 revised-file link.",
   },
   plants: {
     title: "Ethnobotanical knowledge in Madyan and neighbouring villages",
@@ -46,7 +46,7 @@ export const sources = {
   tourism: {
     title: "Swat: provincial tourism guide",
     publisher: "Khyber Pakhtunkhwa Tourism",
-    url: "https://old.kptourism.com/uploads/images/emagazine/1613314124030-swat.pdf",
+    url: "https://tourism.gov.pk/publications/Swat%20Booklet.pdf",
     note: "Geographical orientation for the lake and river towns. Current opening times and travel claims are deliberately omitted.",
   },
   barikot: {
@@ -82,12 +82,6 @@ export const sources = {
     publisher: "Bazai et al. · Natural Hazards and Earth System Sciences, 2025",
     url: "https://doi.org/10.5194/nhess-25-1071-2025",
     note: "Peer-reviewed research combining fieldwork, remote sensing and numerical simulations. The site distinguishes observed change from modelled outcomes.",
-  },
-  assessment: {
-    title: "Swat Valley: synthesis report on the 2022 floods",
-    publisher: "Swiss Agency for Development and Cooperation",
-    url: "https://www.deza.eda.admin.ch/dam/de/sd-web/jriMDAHkMREZ/synthesis-report-floods-report_en.pdf",
-    note: "Assessment of river erosion, sediment and the river corridor after the 2022 floods.",
   },
   craft: {
     title: "Tree of Life: The Art of Wood Carving in Swat",

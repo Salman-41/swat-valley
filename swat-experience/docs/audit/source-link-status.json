@@ -1,0 +1,146 @@
+[
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9865100/",
+    "status": 200,
+    "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9865100/"
+  },
+  {
+    "url": "https://fli-online.org/documents/languages/gawri/gawri_introduction.pdf",
+    "status": 200,
+    "finalUrl": "https://fli-online.org/documents/languages/gawri/gawri_introduction.pdf"
+  },
+  {
+    "url": "https://old.kptourism.com/uploads/images/downloads/1586272079279KITE%20E%26S%20Management%20Framework%2C%20updated%20with%20COVID-19%20checklists.pdf",
+    "status": 404,
+    "finalUrl": "https://old.kptourism.com/uploads/images/downloads/1586272079279KITE%20E%26S%20Management%20Framework%2C%20updated%20with%20COVID-19%20checklists.pdf"
+  },
+  {
+    "url": "https://doi.org/10.32859/era.26.26.1-15",
+    "status": 200,
+    "finalUrl": "https://ethnobotanyjournal.org/index.php/era/login?source=%2Findex.php%2Fera%2Farticle%2Fview%2F5315"
+  },
+  {
+    "url": "https://pric.unive.it/projects/khyberpath/research-and-excavations/site-1-barikot",
+    "status": 200,
+    "finalUrl": "https://pric.unive.it/projects/khyberpath/research-and-excavations/site-1-barikot"
+  },
+  {
+    "url": "https://doam.gov.pk/public/sites/3304",
+    "status": 200,
+    "finalUrl": "https://doam.gov.pk/public/sites/3304"
+  },
+  {
+    "url": "https://www.pakbs.org/pjbot/PDFs/47(6)/14.pdf",
+    "status": 200,
+    "finalUrl": "https://www.pakbs.org/pjbot/PDFs/47(6)/14.pdf"
+  },
+  {
+    "url": "https://old.kptourism.com/uploads/images/emagazine/1613314124030-swat.pdf",
+    "status": 404,
+    "finalUrl": "https://old.kptourism.com/uploads/images/emagazine/1613314124030-swat.pdf"
+  },
+  {
+    "url": "https://whc.unesco.org/en/tentativelists/7034/",
+    "status": 200,
+    "finalUrl": "https://whc.unesco.org/en/tentativelists/7034/"
+  },
+  {
+    "url": "https://kparchaeology.gkp.pk/swat-museum/",
+    "status": 200,
+    "finalUrl": "https://kparchaeology.gkp.pk/swat-museum/"
+  },
+  {
+    "url": "https://folklife.si.edu/magazine/stream-of-voices-torwali-language-music-poetry-pakistan",
+    "status": 403,
+    "finalUrl": "https://folklife.si.edu/magazine/stream-of-voices-torwali-language-music-poetry-pakistan"
+  },
+  {
+    "url": "https://www.torwali.org/index.php/en/people-culture",
+    "status": 200,
+    "finalUrl": "https://www.torwali.org/index.php/en/people-culture"
+  },
+  {
+    "url": "https://doi.org/10.5194/nhess-25-1071-2025",
+    "status": 200,
+    "finalUrl": "https://nhess.copernicus.org/articles/25/1071/2025/"
+  },
+  {
+    "url": "https://www.deza.eda.admin.ch/dam/de/sd-web/jriMDAHkMREZ/synthesis-report-floods-report_en.pdf",
+    "status": 404,
+    "finalUrl": "https://www.deza.eda.admin.ch/dam/de/sd-web/jriMDAHkMREZ/synthesis-report-floods-report_en.pdf"
+  },
+  {
+    "url": "https://thesouthasiacollection.co.uk/exhibition/tree-of-life-the-art-of-woodcarving-in-swat/",
+    "status": 200,
+    "finalUrl": "https://thesouthasiacollection.co.uk/exhibition/tree-of-life-the-art-of-woodcarving-in-swat/"
+  },
+  {
+    "url": "https://www.openstreetmap.org/copyright",
+    "status": 200,
+    "finalUrl": "https://www.openstreetmap.org/copyright"
+  },
+  {
+    "url": "https://www.geonames.org/",
+    "status": 200,
+    "finalUrl": "https://www.geonames.org/"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Swat_Valley",
+    "status": 200,
+    "finalUrl": "https://en.wikipedia.org/wiki/Swat_Valley"
+  },
+  {
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "status": 200,
+    "finalUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Mahodand_Lake-Summer_2015.jpg",
+    "error": "HTTPSConnectionPool(host='commons.wikimedia.org', port=443): Max retries exceeded with url: /wiki/File:Mahodand_Lake-Summer_2015.jpg (Caused by NameResolutionEr"
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Mahodand_Lake,_Kalam,_Swat,_Pakistan.jpg",
+    "error": "HTTPSConnectionPool(host='commons.wikimedia.org', port=443): Max retries exceeded with url: /wiki/File:Mahodand_Lake,_Kalam,_Swat,_Pakistan.jpg (Caused by NameR"
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Kalam_Valley_Mountain.jpg",
+    "error": "HTTPSConnectionPool(host='commons.wikimedia.org', port=443): Max retries exceeded with url: /wiki/File:Kalam_Valley_Mountain.jpg (Caused by NameResolutionError("
+  },
+  {
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "status": 200,
+    "finalUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:General_View_of_the_main_Butkara-I_Stupa.JPG",
+    "error": "HTTPSConnectionPool(host='commons.wikimedia.org', port=443): Max retries exceeded with url: /wiki/File:General_View_of_the_main_Butkara-I_Stupa.JPG (Caused by N"
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Bahrain_town_in_Swat.jpg",
+    "error": "HTTPSConnectionPool(host='commons.wikimedia.org', port=443): Max retries exceeded with url: /wiki/File:Bahrain_town_in_Swat.jpg (Caused by NameResolutionError(\""
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Photo_of_Madyan_-_Swat_%2811%29.jpg",
+    "error": "HTTPSConnectionPool(host='commons.wikimedia.org', port=443): Max retries exceeded with url: /wiki/File:Photo_of_Madyan_-_Swat_%2811%29.jpg (Caused by NameResolu"
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Barikot_Ghundai_Ruins.JPG",
+    "error": "HTTPSConnectionPool(host='commons.wikimedia.org', port=443): Max retries exceeded with url: /wiki/File:Barikot_Ghundai_Ruins.JPG (Caused by NameResolutionError("
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Swat_Museum%2C_Swat.jpg",
+    "error": "HTTPSConnectionPool(host='commons.wikimedia.org', port=443): Max retries exceeded with url: /wiki/File:Swat_Museum%2C_Swat.jpg (Caused by NameResolutionError(\"<"
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Malam_Jabba%2C_Swat_Valley%2C_Pakistan.jpg",
+    "error": "HTTPSConnectionPool(host='commons.wikimedia.org', port=443): Max retries exceeded with url: /wiki/File:Malam_Jabba%2C_Swat_Valley%2C_Pakistan.jpg (Caused by Nam"
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Swat_River_in_Bahrain_Pakistan_A.jpg",
+    "error": "HTTPSConnectionPool(host='commons.wikimedia.org', port=443): Max retries exceeded with url: /wiki/File:Swat_River_in_Bahrain_Pakistan_A.jpg (Caused by NameResol"
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Usho_Valley_Kalam.jpg",
+    "error": "HTTPSConnectionPool(host='commons.wikimedia.org', port=443): Max retries exceeded with url: /wiki/File:Usho_Valley_Kalam.jpg (Caused by NameResolutionError(\"<ur"
+  }
+]

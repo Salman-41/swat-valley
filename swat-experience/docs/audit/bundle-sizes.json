@@ -1,0 +1,42 @@
+[
+  {
+    "file": "Base.Cv94m5KO.css",
+    "bytes": 33165,
+    "gzipBytes": 7818
+  },
+  {
+    "file": "Base.DL_jRHDB.css",
+    "bytes": 5030,
+    "gzipBytes": 1592
+  },
+  {
+    "file": "Base.astro_astro_type_script_index_1_lang.beJmbdjr.js",
+    "bytes": 100076,
+    "gzipBytes": 36205
+  },
+  {
+    "file": "atlas.8qRUISz9.css",
+    "bytes": 71450,
+    "gzipBytes": 10122
+  },
+  {
+    "file": "atlas.astro_astro_type_script_index_0_lang.EKGz3Rhw.js",
+    "bytes": 11949,
+    "gzipBytes": 4551
+  },
+  {
+    "file": "gsap.BHS3Flg1.js",
+    "bytes": 69549,
+    "gzipBytes": 26897
+  },
+  {
+    "file": "maplibre-gl-worker-BWso-Bu4.js",
+    "bytes": 518423,
+    "gzipBytes": 146989
+  },
+  {
+    "file": "maplibre-gl.WyExkaQm.js",
+    "bytes": 1094272,
+    "gzipBytes": 291217
+  }
+]

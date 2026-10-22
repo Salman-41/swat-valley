@@ -91,7 +91,7 @@ export const places: Place[] = [
       language:
         "Gawri, also known as Kalami, is spoken around Kalam, Ushu and Utror. Linguist Joan Baart and community researcher Muhammad Zaman Sagar describe the relationship between these speech communities.",
       memory:
-        "A 2020 provincial tourism assessment discussed forest pressure, waste, sewage and unplanned building in Kalam. The town’s future belongs to more than its photographic image.",
+        "A 2019 provincial tourism assessment discussed forest pressure, waste, sewage and unplanned building in Kalam. The town’s future belongs to more than its photographic image.",
     },
     sections: [
       {
@@ -113,7 +113,7 @@ export const places: Place[] = [
       {
         heading: "The town beyond the view.",
         body: [
-          "The 2020 KITE environmental and social framework identified issues including waste, sewage, forests and building pressure in Kalam. These dated planning observations help connect destination imagery to the everyday work of caring for a town.",
+          "The 2019 KITE environmental and social framework identified issues including waste, sewage, forests and building pressure in Kalam. These dated planning observations help connect destination imagery to the everyday work of caring for a town.",
         ],
         sources: ["kite"],
       },

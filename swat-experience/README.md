@@ -23,7 +23,7 @@ npm run validate # after build: internal routes, anchors, images, map provenance
 npm test
 ```
 
-Tests use Brave at `/opt/brave.com/brave/brave` in this authoring environment. Set `SWAT_BROWSER` to a Chromium-compatible executable on another machine. The test preview uses port 4387; start it with `npm run preview -- --port 4387` if the Astro version launches its preview daemon and exits. Tests reuse that dedicated preview.
+Tests use Brave at `/opt/brave.com/brave/brave` in this authoring environment. Set `SWAT_BROWSER` to a Chromium-compatible executable elsewhere. Playwright starts a foreground static QA server on port 4391 from the built `dist/`; no manually started preview is required.
 
 ## Structure
 

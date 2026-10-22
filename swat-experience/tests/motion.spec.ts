@@ -145,7 +145,7 @@ test("touch alternative stays native with no horizontal overflow", async ({
     hasTouch: true,
   });
   const page = await context.newPage();
-  await page.goto("http://127.0.0.1:4387/");
+  await page.goto("http://127.0.0.1:4391/");
   await expect(page.locator("html")).toHaveAttribute("data-motion-ready", "true");
   await expect(page.locator("html")).toHaveAttribute("data-intro", "settled");
   await page.evaluate(async()=>{for(const img of Array.from(document.querySelectorAll<HTMLImageElement>("main img"))){img.loading="eager";await img.decode().catch(()=>{});}});

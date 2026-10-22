@@ -154,9 +154,9 @@ test("reading and place journeys remain available without JavaScript", async ({
 }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
-  await page.goto("http://127.0.0.1:4387/culture/");
+  await page.goto("http://127.0.0.1:4391/culture/");
   await expect(page.locator("#gawri")).toBeVisible();
-  await page.goto("http://127.0.0.1:4387/atlas/");
+  await page.goto("http://127.0.0.1:4391/atlas/");
   await expect(page.locator("#coordinate-fallback")).toBeVisible();
   await page
     .locator("main")

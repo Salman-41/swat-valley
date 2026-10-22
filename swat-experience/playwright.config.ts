@@ -6,7 +6,7 @@ export default defineConfig({
   workers: 2,
   reporter: [["list"], ["html", { open: "never" }]],
   use: {
-    baseURL: "http://127.0.0.1:4387",
+    baseURL: "http://127.0.0.1:4391",
     headless: true,
     launchOptions: {
       executablePath: process.env.SWAT_BROWSER || "/opt/brave.com/brave/brave",
@@ -15,8 +15,8 @@ export default defineConfig({
     trace: "retain-on-failure",
   },
   webServer: {
-    command: "npm run preview -- --port 4387",
-    url: "http://127.0.0.1:4387",
+    command: "node scripts/serve.mjs --port 4391",
+    url: "http://127.0.0.1:4391",
     reuseExistingServer: true,
     timeout: 60000,
   },
