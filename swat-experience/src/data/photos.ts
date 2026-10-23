@@ -12,6 +12,7 @@ export interface Photo {
   height: number;
 }
 export const photos: Photo[] = [
+{"id": "islampur", "filename": "islampur.jpg", "title": "Islampur swat pakistan.jpg", "author": "Tabindaalkansjaffery", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/", "source": "https://commons.wikimedia.org/wiki/File:Islampur_swat_pakistan.jpg", "date": "23 February 2013 (source metadata)", "alt": "Bare branches above hillside buildings and distant snowy slopes, identified by the photographer as Islampur, Swat.", "width": 2592, "height": 1944},
   {
     id: "lake",
     filename: "lake.jpg",

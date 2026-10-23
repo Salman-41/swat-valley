@@ -227,19 +227,18 @@
     "licensing_state": "CC-BY-SA-4.0",
     "notes": "Actual village photograph, not craft close-up",
     "intended_use": "Culture/settlement",
-    "local_file": null,
-    "creator": null,
-    "license_url": null,
-    "verified_on": "2026-10-22",
-    "production_approved": false,
-    "actual_download_verified": false,
+    "local_file": "assets/originals/islampur.jpg",
+    "creator": "Tabindaalkansjaffery",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "verified_on": "2026-10-23",
+    "production_approved": true,
+    "actual_download_verified": true,
     "seed_production_approved": false,
-    "status": "discovery",
-    "verification_evidence": [],
-    "blockers": [
-      "Exact item rights require independent verification",
-      "Local asset and checksum not verified"
-    ]
+    "status": "approved",
+    "verification_evidence": [
+      "docs/expansion-islampur-evidence.json"
+    ],
+    "blockers": []
   },
   {
     "id": "met_swat_object",

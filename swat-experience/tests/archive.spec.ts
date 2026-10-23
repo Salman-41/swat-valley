@@ -5,7 +5,7 @@ test('archive search, filters, URL restoration and photo inspection',async({page
  await expect(page.locator('[data-record]:visible')).toHaveCount(6);
  await page.getByRole('button',{name:'Next →',exact:true}).click();
  await expect(page).toHaveURL(/page=2/);
- await expect(page.locator('[data-record]:visible')).toHaveCount(5);
+ await expect(page.locator('[data-record]:visible')).toHaveCount(6);
  await page.getByRole('searchbox').fill('Bahrain');
  await expect(page.locator('[data-record]:visible')).toHaveCount(2);
  await page.reload();await expect(page.getByRole('searchbox')).toHaveValue('Bahrain');
