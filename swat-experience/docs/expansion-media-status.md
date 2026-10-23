@@ -21,3 +21,13 @@ Added Islampur by Tabindaalkansjaffery, attributed CC BY-SA 4.0 on its Commons f
 Added `scripts/verify-ingested-media.mjs` to check required provenance, original-file integrity and derivative existence. This complements metadata checks; it is not independent legal certification. The 35–60-photo target remains incomplete.
 
 Verification for this acquisition: build/typecheck passed (27 files, 15 routes), content validation passed (572 local links/assets, twelve photo families), checksum/derivative verifier passed, and both archive browser tests passed (28 seconds). Six responsive archive screenshots refreshed; automated accessibility assertions passed. Firefox/WebKit and physical-device/manual assistive-technology testing were not performed.
+
+## 23 October — geographic conflict and archive corrections
+
+Quarantined `commons_kalam_river`: the Commons title identifies Kalam, but its listed camera coordinates (34.912233, 73.656039) conflict with that locality. This is a metadata conflict, not proof of the true photographed location. No download/publication approved. Evidence revision 1237166831 is linked from the research registry. Updated seed preparation to preserve documented quarantine decisions as well as approvals.
+
+A direct attempt to fetch the Barikot file page failed DNS resolution; no new rights claim or approval was inferred. The collection remains twelve images.
+
+Fixed the shared photo inspector to cycle only through visible photographs at opening, respecting archive filters/pagination. Single-result views disable previous/next. Malformed fractional, negative and non-finite page parameters now fall back to page one. Added an interaction regression test for filtered inspector cycling, single-result controls and fractional-page recovery.
+
+Verification: production build and typecheck passed; checksum/derivative verification and 15-route content validation passed; four targeted browser tests passed in 26.6 seconds. These include archive responsive captures/axe, search and URL state, filtered photo navigation, and existing place-page zoom/pan/navigation. Six archive screenshots refreshed. No new assets approved in this increment.

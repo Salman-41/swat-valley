@@ -25,3 +25,14 @@ test('archive responsive evidence and automated accessibility',async({page})=>{
  }
  const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(result.violations).toEqual([]);
 });
+test('filtered inspector stays within results and malformed pages recover',async({page})=>{
+ await page.goto('/archive/?q=Bahrain&page=1.5');
+ await expect(page.locator('[data-record]:visible')).toHaveCount(2);
+ await page.locator('[data-record]:visible [data-open-photo]').first().click();
+ await expect(page.locator('#detail-caption')).toContainText('Bahrain');
+ for(let i=0;i<3;i++){await page.getByRole('button',{name:'Next photograph',exact:true}).click();await expect(page.locator('#detail-caption')).toContainText('Bahrain');}
+ await page.keyboard.press('Escape');
+ await page.getByRole('searchbox').fill('Islampur');
+ await page.locator('[data-record]:visible [data-open-photo]').click();
+ await expect(page.getByRole('button',{name:'Next photograph',exact:true})).toBeDisabled();
+});

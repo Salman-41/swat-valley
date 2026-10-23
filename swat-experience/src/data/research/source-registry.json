@@ -164,15 +164,16 @@
     "local_file": null,
     "creator": null,
     "license_url": null,
-    "verified_on": "2026-10-22",
+    "verified_on": "2026-10-23",
     "production_approved": false,
     "actual_download_verified": false,
     "seed_production_approved": false,
-    "status": "discovery",
-    "verification_evidence": [],
+    "status": "quarantined",
+    "verification_evidence": [
+      "https://commons.wikimedia.org/w/index.php?title=File:Swat_River_at_Kalam_Valley.jpg&oldid=1237166831"
+    ],
     "blockers": [
-      "Exact item rights require independent verification",
-      "Local asset and checksum not verified"
+      "File title says Kalam but camera coordinates 34.912233, 73.656039 conflict with Kalam locality. Requires independent geographic reconciliation."
     ]
   },
   {

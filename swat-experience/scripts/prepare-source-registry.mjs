@@ -6,7 +6,7 @@ const records=seeds.map(seed=>{
  if(!seed.id||ids.has(seed.id))throw new Error(`Missing or duplicate source ID: ${seed.id}`);
  ids.add(seed.id);
  if(new URL(seed.source_url).protocol!=='https:')throw new Error(`Insecure source: ${seed.id}`);
- const reviewed=existing.find(record=>record.id===seed.id&&record.status==='approved'&&record.verification_evidence?.length);
+ const reviewed=existing.find(record=>record.id===seed.id&&['approved','quarantined'].includes(record.status)&&record.verification_evidence?.length);
  if(reviewed)return reviewed;
  return {...seed,seed_production_approved:seed.production_approved,production_approved:false,status:'discovery',verification_evidence:[],blockers:['Exact item rights require independent verification','Local asset and checksum not verified']};
 });

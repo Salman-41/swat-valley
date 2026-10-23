@@ -36,6 +36,7 @@ const photographs = Array.from(document.querySelectorAll<HTMLButtonElement>('[da
 const zoom = document.querySelector<HTMLInputElement>('#photo-zoom');
 const viewport = document.querySelector<HTMLElement>('.photo-viewport');
 let currentPhoto = 0;
+let activePhotographs = photographs;
 function setZoom(value:number) {
  if(!image||!viewport||!zoom)return;
  zoom.value=String(value);
@@ -46,19 +47,19 @@ function setZoom(value:number) {
  if(value===100)viewport.scrollTo({left:0,top:0});
 }
 function showPhoto(index:number) {
- const button=photographs[index];if(!button||!dialog||!image||!caption||!source)return;
+ const button=activePhotographs[index];if(!button||!dialog||!image||!caption||!source)return;
  currentPhoto=index;
  dialog.classList.add('is-loading');dialog.classList.remove('has-error');
  image.alt=button.closest('figure')?.querySelector('img')?.alt??'Photograph detail';
  image.src=button.dataset.openPhoto??'';
  caption.textContent=button.dataset.photoCaption??'';
  source.href=button.dataset.photoSource??'/sources/';setZoom(100);
- document.querySelectorAll<HTMLButtonElement>('[data-photo-previous],[data-photo-next]').forEach(control=>control.disabled=photographs.length<2);
+ document.querySelectorAll<HTMLButtonElement>('[data-photo-previous],[data-photo-next]').forEach(control=>control.disabled=activePhotographs.length<2);
 }
-photographs.forEach((button,index)=>button.addEventListener('click',()=>{photoTrigger=button;showPhoto(index);dialog?.showModal();document.body.classList.add('dialog-open');}));
+photographs.forEach((button)=>button.addEventListener('click',()=>{activePhotographs=photographs.filter(item=>!item.closest('[hidden]'));photoTrigger=button;showPhoto(activePhotographs.indexOf(button));dialog?.showModal();document.body.classList.add('dialog-open');}));
 zoom?.addEventListener('input',()=>setZoom(Number(zoom.value)));
-document.querySelector('[data-photo-previous]')?.addEventListener('click',()=>showPhoto((currentPhoto+photographs.length-1)%photographs.length));
-document.querySelector('[data-photo-next]')?.addEventListener('click',()=>showPhoto((currentPhoto+1)%photographs.length));
+document.querySelector('[data-photo-previous]')?.addEventListener('click',()=>showPhoto((currentPhoto+activePhotographs.length-1)%activePhotographs.length));
+document.querySelector('[data-photo-next]')?.addEventListener('click',()=>showPhoto((currentPhoto+1)%activePhotographs.length));
 image?.addEventListener("load", () => dialog?.classList.remove("is-loading"));
 image?.addEventListener("error", () => {
   dialog?.classList.remove("is-loading");
