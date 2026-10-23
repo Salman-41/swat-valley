@@ -1,0 +1,4 @@
+import {readFile} from 'node:fs/promises';import {createHash} from 'node:crypto';import sharp from 'sharp';
+const records=JSON.parse(await readFile('docs/objects/manifest.json'));
+for(const r of records){const api=JSON.parse(await readFile(r.evidence));if(api.isPublicDomain!==true||r.download!==api.primaryImage)throw new Error(`Rights evidence mismatch: ${r.id}`);const bytes=await readFile(`assets/objects/${r.id}.jpg`);if(createHash('sha256').update(bytes).digest('hex')!==r.sha256)throw new Error(`Checksum mismatch: ${r.id}`);await sharp(bytes).stats();for(const w of r.derivativeWidths)for(const type of ['jpg','webp'])await sharp(`public/objects/${r.id}-${w}.${type}`).stats();}
+console.log(`Verified ${records.length} public-domain records, original checksums and fully decoded derivatives.`);

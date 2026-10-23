@@ -1,0 +1,40 @@
+[
+  {
+    "id": "dipankara",
+    "metId": 49809,
+    "source": "https://www.metmuseum.org/art/collection/search/49809",
+    "download": "https://images.metmuseum.org/CRDImages/as/original/DP123357.jpg",
+    "isPublicDomain": true,
+    "verifiedOn": "2026-10-23",
+    "sha256": "8e721a78462b9ab6c4300659fa8186d7ec3a2af393b6c6a5449000e8fca6144e",
+    "width": 3790,
+    "height": 3792,
+    "derivativeWidths": [
+      480,
+      960,
+      1600
+    ],
+    "changes": "Resize and compression only; full image retained",
+    "inspection": "Original visually inspected; no reconstruction; catalogue uncertainty retained",
+    "evidence": "docs/objects/met-49809.json"
+  },
+  {
+    "id": "marine-deity",
+    "metId": 38789,
+    "source": "https://www.metmuseum.org/art/collection/search/38789",
+    "download": "https://images.metmuseum.org/CRDImages/as/original/DP138045.jpg",
+    "isPublicDomain": true,
+    "verifiedOn": "2026-10-23",
+    "sha256": "fc2138682809ca093bf57f24be985c5661255f70a299c9a42c8016c19ecc85e7",
+    "width": 3791,
+    "height": 3792,
+    "derivativeWidths": [
+      480,
+      960,
+      1600
+    ],
+    "changes": "Resize and compression only; full image retained",
+    "inspection": "Original visually inspected; no reconstruction; catalogue uncertainty retained",
+    "evidence": "docs/objects/met-38789.json"
+  }
+]

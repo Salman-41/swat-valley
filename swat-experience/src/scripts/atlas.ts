@@ -50,7 +50,31 @@ followButton.addEventListener("click", () => {
     : "Follow selected place";
   if (following) focusPlace();
 });
+const searchInput=document.querySelector<HTMLInputElement>('#atlas-query')!;
+const kindInput=document.querySelector<HTMLSelectElement>('#atlas-kind')!;
+searchInput.value=query.get('q')||'';kindInput.value=query.get('kind')||'';
+function matchingIndices(){return places.flatMap((p,i)=>`${p.name} ${p.region} ${p.kind}`.toLowerCase().includes(searchInput.value.trim().toLowerCase())&&(!kindInput.value||p.kind===kindInput.value)?[i]:[]);}
+function filterPlaces(){
+ const matches=matchingIndices();
+ if(matches.length&&!matches.includes(index))index=matches[0]!;
+ Array.from(select.options).forEach((option,i)=>{option.hidden=!matches.includes(i);option.disabled=option.hidden;});select.disabled=!matches.length;
+ followButton.disabled=!matches.length;
+ (document.querySelector(".map-story-jump") as HTMLElement).hidden=!matches.length;
+ document.querySelector('#atlas-results')!.textContent=`${matches.length} place${matches.length===1?"":"s"}`;
+ (document.querySelector('#atlas-empty') as HTMLElement).hidden=matches.length>0;
+ ['.atlas-place','.atlas-step'].forEach(selector=>(document.querySelector(selector) as HTMLElement).hidden=!matches.length);
+ document.querySelectorAll<HTMLElement>('[data-place-link]').forEach(el=>el.hidden=!matches.some(i=>places[i]!.id===el.dataset.placeLink));
+ document.querySelectorAll<SVGElement>('[data-plot-place]').forEach(el=>el.style.display=matches.some(i=>places[i]!.id===el.dataset.plotPlace)?'':'none');
+ markers.forEach((marker,i)=>marker.getElement().hidden=!matches.includes(i));
+ document.querySelectorAll<HTMLButtonElement>('#previous-place,#next-place').forEach(button=>button.disabled=matches.length<2);
+ return matches;
+}
+function stepPlace(direction:number){const matches=matchingIndices();if(!matches.length)return;index=matches[(matches.indexOf(index)+direction+matches.length)%matches.length]!;update(true);}
+searchInput.addEventListener('input',()=>update(true));kindInput.addEventListener('change',()=>update(true));
+document.querySelector('#atlas-search')!.addEventListener('submit',e=>{e.preventDefault();update(true);});
+document.querySelector('#atlas-search')!.addEventListener('reset',()=>{searchInput.value='';kindInput.value='';update(true);});
 function update(push = false) {
+  filterPlaces();
   const place = places[index]!;
   const placeChanged = previousPlace !== place.id;
   select.value = place.id;
@@ -128,6 +152,8 @@ function update(push = false) {
     const url = new URL(location.href);
     url.searchParams.set("place", place.id);
     url.searchParams.set("lens", lens);
+    if(searchInput.value)url.searchParams.set("q",searchInput.value);else url.searchParams.delete("q");
+    if(kindInput.value)url.searchParams.set("kind",kindInput.value);else url.searchParams.delete("kind");
     history.pushState(null, "", url);
   }
 }
@@ -142,15 +168,14 @@ document.querySelectorAll<HTMLButtonElement>("[data-lens]").forEach((button) =>
   }),
 );
 document.querySelector("#previous-place")!.addEventListener("click", () => {
-  index = (index + places.length - 1) % places.length;
-  update(true);
+  stepPlace(-1);
 });
 document.querySelector("#next-place")!.addEventListener("click", () => {
-  index = (index + 1) % places.length;
-  update(true);
+  stepPlace(1);
 });
 window.addEventListener("popstate", () => {
   const params = new URLSearchParams(location.search);
+  searchInput.value=params.get("q")||"";kindInput.value=params.get("kind")||"";
   index = Math.max(
     0,
     places.findIndex((p) => p.id === params.get("place")),

@@ -39,3 +39,13 @@ Tests use Brave at `/opt/brave.com/brave/brave` in this authoring environment. S
 `npm run images` regenerates responsive assets with Sharp. `scripts/fetch-tiles.py` documents the bounded OpenFreeMap download; it requires Python requests and network access. Credits, dates and licenses are available at `/sources/`.
 
 The earlier static prototype is preserved in `SWAT-prototype.zip`; its research documentation and older screenshots remain as design history. The current experience uses real HTML routes, not hash routing. Prototype bookmarks redirect to their equivalent pages.
+
+### Expanded collection
+
+- `/archive/`: documentary photographs with combined search, subject and place filters, URL state and a filtered image inspector.
+- `/objects/`: comparison of two source-verified public-domain museum images; `/objects/dipankara/` and `/objects/marine-deity/` retain catalogue uncertainty and individual credits.
+- `/research/`: searchable bibliography with topic filters and source-register links.
+
+Museum originals are in `assets/objects/`; API snapshots and checksum manifest are in `docs/objects/`. Generate derivatives with `node scripts/process-objects.mjs`, then validate with `node scripts/verify-objects.mjs`. Do not approve a museum image solely because it appears on an institutional website: the importer requires the item's public-domain flag. Research-only links do not grant media reuse permission.
+
+See `docs/EXPANSION-COLLECTION-PASS.md` for this increment's scope, evidence and remaining work.

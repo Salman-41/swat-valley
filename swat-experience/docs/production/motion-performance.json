@@ -2,87 +2,90 @@
   "environment": "Headless Brave on local Linux; software GPU, warm local server. Lab observations, not field INP or physical-device FPS.",
   "viewport": "1440x900",
   "frameSamples": 116,
-  "medianFrameMs": 16.699999999999818,
-  "p95FrameMs": 33.40000000000009,
-  "framesOver33ms": 25,
-  "first40AverageMs": 20.832500000000003,
-  "last40AverageMs": 19.585,
+  "medianFrameMs": 33.30000000000018,
+  "p95FrameMs": 33.400000000000546,
+  "framesOver33ms": 68,
+  "first40AverageMs": 27.91500000000001,
+  "last40AverageMs": 26.25,
   "cls": 0.00019630239143947188,
   "longTasks": [
-    88
+    175,
+    84,
+    61,
+    60
   ],
   "events": [
-    128,
-    128,
-    128,
-    128,
-    128,
-    128,
-    128,
-    128,
-    128,
-    128,
     120,
     120,
     120,
-    80,
-    80,
-    80,
-    80,
-    80,
-    80,
-    80,
-    80,
-    80
+    120,
+    120,
+    120,
+    120,
+    120,
+    120,
+    120,
+    120,
+    120,
+    120,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
   ],
-  "lcp": 216,
-  "heap": 5836277,
+  "lcp": 656,
+  "heap": 4789880,
   "quality": "full",
   "resources": [
     {
       "name": "/fonts/italiana.ttf",
       "bytes": 26984,
-      "duration": 23.799999999813735
+      "duration": 57.199999999953434
     },
     {
       "name": "/_astro/Base.3leF6hGC.css",
       "bytes": 33593,
-      "duration": 44.8000000002794
+      "duration": 58.5
     },
     {
       "name": "/_astro/Base.DL_jRHDB.css",
       "bytes": 5330,
-      "duration": 45.39999999990687
+      "duration": 64.89999999990687
     },
     {
       "name": "/images/lake-1600.avif",
       "bytes": 304615,
-      "duration": 48
+      "duration": 83.80000000004657
     },
     {
       "name": "/_astro/Base.astro_astro_type_script_index_1_lang.beJmbdjr.js",
       "bytes": 100376,
-      "duration": 46.3000000002794
+      "duration": 79.0999999998603
     },
     {
       "name": "/fonts/dm-sans.ttf",
       "bytes": 48580,
-      "duration": 69.10000000009313
+      "duration": 108.10000000009313
     },
     {
       "name": "/_astro/gsap.BHS3Flg1.js",
       "bytes": 69849,
-      "duration": 27.700000000186265
+      "duration": 24
     },
     {
       "name": "/favicon.svg",
       "bytes": 515,
-      "duration": 8.100000000093132
+      "duration": 14.100000000093132
     },
     {
       "name": "/images/butkara-1600.avif",
       "bytes": 251820,
-      "duration": 8.799999999813735
+      "duration": 19
     }
   ]
 }

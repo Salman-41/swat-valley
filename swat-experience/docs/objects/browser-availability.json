@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Firefox",
+    "available": false,
+    "reason": "Error: browserType.launch: Executable doesn't exist at /home/salman/.cache/ms-playwright/firefox-1555/firefox/firefox ╔════════════════════════════════════════════════════════════╗"
+  },
+  {
+    "name": "WebKit",
+    "available": false,
+    "reason": "Error: browserType.launch: Executable doesn't exist at /home/salman/.cache/ms-playwright/webkit-2370/pw_run.sh ╔════════════════════════════════════════════════════════════╗"
+  }
+]

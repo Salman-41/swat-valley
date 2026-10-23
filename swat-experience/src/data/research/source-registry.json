@@ -249,19 +249,18 @@
     "licensing_state": "public-domain-open-access",
     "notes": "Met marks public domain; verify image link and object number",
     "intended_use": "Object room",
-    "local_file": null,
-    "creator": null,
-    "license_url": null,
-    "verified_on": "2026-10-22",
-    "production_approved": false,
-    "actual_download_verified": false,
+    "local_file": "assets/objects/dipankara.jpg",
+    "creator": "Unknown ancient maker; image: The Metropolitan Museum of Art",
+    "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+    "verified_on": "2026-10-23",
+    "production_approved": true,
+    "actual_download_verified": true,
     "seed_production_approved": true,
-    "status": "discovery",
-    "verification_evidence": [],
-    "blockers": [
-      "Exact item rights require independent verification",
-      "Local asset and checksum not verified"
-    ]
+    "status": "approved",
+    "verification_evidence": [
+      "docs/objects/manifest.json"
+    ],
+    "blockers": []
   },
   {
     "id": "met_other",
@@ -271,19 +270,18 @@
     "licensing_state": "public-domain-open-access",
     "notes": "Object place provenance marked with question mark; do not misrepresent as certain",
     "intended_use": "Object room with provenance uncertainty",
-    "local_file": null,
-    "creator": null,
-    "license_url": null,
-    "verified_on": "2026-10-22",
-    "production_approved": false,
-    "actual_download_verified": false,
+    "local_file": "assets/objects/marine-deity.jpg",
+    "creator": "Unknown ancient maker; image: The Metropolitan Museum of Art",
+    "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+    "verified_on": "2026-10-23",
+    "production_approved": true,
+    "actual_download_verified": true,
     "seed_production_approved": true,
-    "status": "discovery",
-    "verification_evidence": [],
-    "blockers": [
-      "Exact item rights require independent verification",
-      "Local asset and checksum not verified"
-    ]
+    "status": "approved",
+    "verification_evidence": [
+      "docs/objects/manifest.json"
+    ],
+    "blockers": []
   },
   {
     "id": "met_api",
